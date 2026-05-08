@@ -1,0 +1,31 @@
+#login{
+    background-image: url(assets/images/Fundo_tela.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#preto{
+    background-color: black;
+    padding: 49% 40% 0 0;
+    position: relative;
+
+}
+#colorir{
+    background-color: rgba(0, 0, 0, 0.753) !important;
+    color: white !important;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border:0px !important;
+}
+
+.dividido{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#logo{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 600px;
+    height: 700px;
+}
