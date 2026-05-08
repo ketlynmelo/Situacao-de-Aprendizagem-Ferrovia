@@ -29,3 +29,8 @@
     width: 600px;
     height: 700px;
 }
+
+.toggle{
+    text-align: end;
+    cursor: pointer;
+}
