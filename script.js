@@ -55,8 +55,43 @@ form.addEventListener('submit', function (e) {
         <p>Usuário incorreto!</p>
         </div>
         `; 
+     let erroUsuario = document.getElementById('erro-usuario');
+     let erroSenha = document.getElementById('erro-senha');
+
+      let usuarioInput = document.getElementById('usuario');
+      let senhaInput = document.getElementById('senha');
+
+      let usuario = usuarioInput.value;
+      let senha = senhaInput.value;
+
+    erroUsuario.innerHTML = "";
+    erroSenha.innerHTML = "";
+
+
+    if (usuario.trim() === '') {   //campo vazio
+         usuarioInput.classList.add('is-invalid');
+        erroUsuario.innerHTML = "Campo de usuário vazio!";
+        valido = false;
+    } 
+
+     else if(usuario.trim() !== 'Administrador') {
+       usuarioInput.classList.add('is-invalid');
+       erroUsuario.innerHTML = "Usuário inexistente!";
+       valido = false;
+    }
+
+    if (senha.trim() === '') {   //campo vazio
+        senhaInput.classList.add('is-invalid');
+        erroSenha.innerHTML = "Campo de senha vazio!";
         valido = false;
     }
+
+    else if(senha.trim() !== '1543') {
+       senhaInput.classList.add('is-invalid');
+        erroSenha.innerHTML = "Senha incorreta!";
+        valido = false;
+    }
+
 
 
     if (valido) {
@@ -69,10 +104,11 @@ form.addEventListener('submit', function (e) {
 
         dados.push(usuarioObj);
         console.table(dados);
-        alert('Formulário enviado com sucesso!');
-        window.location.href = "home_historia.html";
+        alert('Login realizado!');
+        window.location.href = "pag_inicial.html";
 
         form.reset();
     }
+}
 
 })

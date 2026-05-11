@@ -50,3 +50,7 @@
     font-size: 15px;
     text-align: center;
 }
+.toggle{
+    text-align: end;
+    cursor: pointer;
+}
