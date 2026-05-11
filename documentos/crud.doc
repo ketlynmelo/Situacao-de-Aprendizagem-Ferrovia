@@ -1,4 +1,4 @@
-   CRUD 
+  CRUD 
 
 No contexto do nosso trabalho o CRUD, vai ser implementado por meio da interação entre PHP ( Vai ficar com a parte lógica do código) com o banco dados, 
 essa junção é fundamental para aplicações dinâmicas. 
