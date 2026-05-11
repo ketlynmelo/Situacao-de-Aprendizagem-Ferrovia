@@ -6,96 +6,71 @@ let toggle = document.getElementById("toggle");
 
 toggle.addEventListener("click", function () {
 
-    alert("Pedido enviado ao Administrador");
+    alert("Pedido enviado ao Administrador 🚂");
 
 });
-
 form.addEventListener('submit', function (e) {
 
     e.preventDefault();
 
     let valido = true;
 
-    let usuario = document.getElementById('usuario').value;
-    let senha = document.getElementById('senha').value;
-    let mensagem = document.getElementById("mensagem");
+    let usuarioInput = document.getElementById('usuario');
+    let senhaInput = document.getElementById('senha');
 
-    mensagem.innerHTML = "";
+    let usuario = usuarioInput.value;
+    let senha = senhaInput.value;
 
-   
-    if (senha.trim() === '') {
-      mensagem.innerHTML = `
-        <div class='erro'>
-        <p>Campo de senha vazio!</p>
-        </div>
-        `; 
-        valido = false;
-    } else if (senha.trim() === '1532') { //verificar se a senha é a correta//
-
-    } else {
-    mensagem.innerHTML = `
-        <div class='erro'>
-        <p>Senha incorreta!</p>
-        </div>
-        `; 
-        valido = false;
-    }
-     if (usuario.trim() === '') {   //campo vazio
-        mensagem.innerHTML = `
-        <div class='erro'>
-        <p>Campo de usuário vazio!</p>
-        </div>
-        `; 
-        valido = false;
-    } else if (usuario.trim() === 'Administrador') { //Verificar o nome//
-
-    } else {
-        mensagem.innerHTML = `
-        <div class='erro'>
-        <p>Usuário incorreto!</p>
-        </div>
-        `; 
-     let erroUsuario = document.getElementById('erro-usuario');
-     let erroSenha = document.getElementById('erro-senha');
-
-      let usuarioInput = document.getElementById('usuario');
-      let senhaInput = document.getElementById('senha');
-
-      let usuario = usuarioInput.value;
-      let senha = senhaInput.value;
+    let erroUsuario = document.getElementById('erro-usuario');
+    let erroSenha = document.getElementById('erro-senha');
 
     erroUsuario.innerHTML = "";
     erroSenha.innerHTML = "";
 
+    usuarioInput.classList.remove('is-invalid');
+    senhaInput.classList.remove('is-invalid');
 
-    if (usuario.trim() === '') {   //campo vazio
-         usuarioInput.classList.add('is-invalid');
+   
+    if (usuario.trim() === '') { //compo vazio
+
+        usuarioInput.classList.add('is-invalid');
+
         erroUsuario.innerHTML = "Campo de usuário vazio!";
-        valido = false;
-    } 
 
-     else if(usuario.trim() !== 'Administrador') {
-       usuarioInput.classList.add('is-invalid');
-       erroUsuario.innerHTML = "Usuário inexistente!";
-       valido = false;
+        valido = false;
+
     }
 
-    if (senha.trim() === '') {   //campo vazio
+    else if (usuario.trim() !== 'Administrador') { //usuario errado1543
+
+        usuarioInput.classList.add('is-invalid');
+
+        erroUsuario.innerHTML = "Usuário inexistente!";
+
+        valido = false;
+    }
+
+  
+    if (senha.trim() === '') { //compo vazio
+
         senhaInput.classList.add('is-invalid');
+
         erroSenha.innerHTML = "Campo de senha vazio!";
+
         valido = false;
+
     }
 
-    else if(senha.trim() !== '1543') {
-       senhaInput.classList.add('is-invalid');
+    else if (senha.trim() !== '1543') { //senha errada
+
+        senhaInput.classList.add('is-invalid');
+
         erroSenha.innerHTML = "Senha incorreta!";
+
         valido = false;
     }
-
-
 
     if (valido) {
-
 
         let usuarioObj = {
             usuario: usuario,
@@ -103,12 +78,14 @@ form.addEventListener('submit', function (e) {
         };
 
         dados.push(usuarioObj);
+
         console.table(dados);
-        alert('Login realizado!');
-        window.location.href = "pag_inicial.html";
+
+        alert('Login realizado! 🚂');
+
+        window.location.href = "home.html";
 
         form.reset();
     }
-}
 
-})
+});
