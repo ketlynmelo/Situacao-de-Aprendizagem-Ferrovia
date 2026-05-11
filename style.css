@@ -1,3 +1,9 @@
+:root{
+    --cor-erro: #ff4747;
+    --cor-sucesso: #94ff86;
+
+    
+}
 #login{
     background-image: url(assets/images/Fundo_tela.png);
     background-repeat: no-repeat;
@@ -6,7 +12,7 @@
 }
 #preto{
     background-color: black;
-    padding: 49% 40% 0 0;
+    padding: 57% 45% 0 0;
     position: relative;
 
 }
@@ -29,7 +35,21 @@
     width: 600px;
     height: 700px;
 }
+.toggle{
+    text-align: end;
+    margin-top: 10px;
+    cursor: pointer;
+    color: var(--cor-texto);
 
+}
+#toggle:hover {
+    color: rgb(70, 70, 226);
+}
+.erro{
+    color: var(--cor-erro);
+    font-size: 15px;
+    text-align: center;
+}
 .toggle{
     text-align: end;
     cursor: pointer;
