@@ -69,3 +69,50 @@
     width: 300px;
     height: 300px;
 }
+ body{
+      margin:0;
+      display:flex;
+      background:#f4f4f4;
+    }
+
+    /* MENU LATERAL */
+    .sidebar{
+      width:250px;
+      height:100vh;
+      align-items:start;
+      background:#000000;
+      padding:20px;
+      position:fixed;
+      left:0;
+      top:0;
+    }
+
+    .sidebar a{
+      display:flex;
+      
+      gap:10px;
+      color:#d1d5db;
+      text-decoration:none;
+      padding:12px;
+      border-radius:10px;
+      transition:0.3s;
+      margin-bottom:10px;
+    }
+
+    .sidebar a:hover{
+      background:#2563eb;
+      color:white;
+    }
+
+    /* CONTEÚDO */
+    .content{
+      margin-left:250px;
+      padding:30px;
+      width:100%;
+    }
+
+.logo{
+width: 200px;
+width: 200px;
+}
+
