@@ -4,7 +4,7 @@
 
     
 }
-#login{
+.login{
     background-image: url(assets/images/Fundo_tela.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -105,14 +105,54 @@
     }
 
     /* CONTEÚDO */
-    .content{
-      margin-left:250px;
-      padding:30px;
+    .conteudo{
+    margin-top: 50px;
+      margin-left:600px;
       width:100%;
+      
     }
 
 .logo{
-width: 200px;
-width: 200px;
+   width: 200px;
+   width: 200px;
+   display: block;
+ }
+
+ form {
+    width: 100%;
+    max-width: 900px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+#permissao{
+    font-size: 15px;
+    margin-top: 20px;
+}
+.borda{
+    border: 1px solid #dcdcdc;
+    border-radius: 15px;
+
+    padding: 20px;
+
+    width: 220px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: 0.3s;
 }
 
+.borda i{
+    font-size: 50px;
+    color: #0d6efd;
+    margin-bottom: 10px;
+}
+
+.borda .form-check-input{
+    align-self: flex-end;
+}
