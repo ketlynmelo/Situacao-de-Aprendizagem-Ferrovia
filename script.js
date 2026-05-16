@@ -31,7 +31,7 @@ form.addEventListener('submit', function (e) {
     senhaInput.classList.remove('is-invalid');
 
    
-    if (usuario.trim() === '') { //compo vazio
+    if (usuario.trim() === '') { //campo vazio
 
         usuarioInput.classList.add('is-invalid');
 
@@ -41,7 +41,7 @@ form.addEventListener('submit', function (e) {
 
     }
 
-    else if (usuario.trim() !== 'Administrador') { //usuario errado1543
+    else if (usuario.trim() !== 'Administrador') { //usuario errado
 
         usuarioInput.classList.add('is-invalid');
 
@@ -51,7 +51,7 @@ form.addEventListener('submit', function (e) {
     }
 
   
-    if (senha.trim() === '') { //compo vazio
+    if (senha.trim() === '') { //campo vazio
 
         senhaInput.classList.add('is-invalid');
 

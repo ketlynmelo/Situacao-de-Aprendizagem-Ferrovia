@@ -1,4 +1,4 @@
-<html lang="en">
+<<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -8,6 +8,7 @@
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
+
   <body id="login">
 
     <main class="dividido">
@@ -32,7 +33,7 @@
           <div class="col-md-12">
             <label for="usuario" class="form-label">Usuário</label>
             <input type="text" class="form-control" id="usuario">
-            <div id="erro-usuario" class="text-danger mt-1">
+            <div id="invalid-feedback">
             </div>
           </div>
 
@@ -40,7 +41,7 @@
           <div class="col-md-12">
             <label for="senha" class="form-label">Senha</label>
             <input type="password" class="form-control" id="senha" required>
-            <div id="erro-senha" class="text-danger mt-1">
+            <div id="invalid-feedback">
             </div>
           </div>
 
@@ -49,18 +50,17 @@
                     <p>Não tem conta? Solicite!</p>
                 </div>
 
+
           <div class="col-12" style="text-align: center;">
             <button class="btn btn-primary" type="submit">Entrar</button>
           </div>
         </form>
 
-        
       </div>
 
     </main>
 
   </body>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
