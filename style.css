@@ -1,33 +1,34 @@
-:root{
+:root {
     --cor-erro: #ff4747;
     --cor-sucesso: #94ff86;
 }
-#login{
+
+.login {
     background-image: url(assets/images/Fundo_tela.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#preto{
+#preto {
     background-color: black;
     padding: 57% 45% 0 0;
     position: relative;
 }
 
-#colorir{
+#colorir {
     background-color: rgba(0, 0, 0, 0.753) !important;
     color: white !important;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border:0px !important;
+    border: 0px !important;
 }
 
-.dividido{
+.dividido {
     display: flex !important;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-#logo{
+#logo {
     position: absolute;
     top: 10%;
     left: 10%;
@@ -35,7 +36,7 @@
     height: 700px;
 }
 
-.toggle{
+.toggle {
     text-align: end;
     margin-top: 10px;
     cursor: pointer;
@@ -46,30 +47,308 @@
     color: rgb(70, 70, 226);
 }
 
-.erro{
+.erro {
     color: var(--cor-erro);
     font-size: 15px;
     text-align: center;
 }
 
-.toggle{
+.toggle {
     text-align: end;
     cursor: pointer;
 }
 
-.sidebar{
-    width:250px;
-    height:100vh;
-    position:fixed;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    background-color:#000;
-    padding-top:20px;
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    padding-top: 20px;
+    position: fixed;
 }
 
-.simbolo{
-    
+.simbolo {
     width: 300px;
     height: 300px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+.menu-link {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 14px 20px;
+    margin-bottom: 10px;
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 0 10px 10px 0;
+    transition: .2s;
+}
+
+.menu-link:hover {
+    background: #2d3d7a;
+    color: white;
+}
+
+.menu-link.active {
+    background: #44539c;
+}
+
+.menu-link i {
+    font-size: 1.2rem;
+}
+
+.main {
+    margin-left: 250px;
+    margin-right: 30px;
+    padding: 30px;
+}
+
+.topbar {
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.card-dashboard {
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+}
+
+.icon-card {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+    background: #44539c;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.btn-custom {
+    background: #44539c;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.btn-custom:hover {
+    background: #2d3d7a;
+    color: white;
+}
+
+.actions-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.actions-top .btn-custom {
+    width: 180px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    background: #44539c;
+    border: none;
+    border-radius: 12px;
+    color: #f1f1f1;
+}
+
+.actions-top .btn-custom:hover {
+    background: #2d3d7a;
+}
+
+
+.table-box {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+}
+
+.table th {
+    background: #f1f1f1;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.badge-admin {
+    background: #44539c;
+}
+
+.badge-user {
+    background: #5a5a5a;
+}
+
+@media(max-width:991px) {
+
+    .sidebar {
+        width: 85px;
+    }
+
+    .sidebar span {
+        display: none;
+    }
+
+    .menu-link {
+        justify-content: center;
+    }
+
+    .logo {
+        width: 55px;
+    }
+
+    .main {
+        margin-left: 85px;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .main {
+        padding: 20px;
+        margin-right: 10px;
+    }
+
+    .topbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 20px;
+    }
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.titulo {
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user i {
+    font-size: 3rem;
+    color: #4b4b4b;
+}
+
+.user span {
+    font-size: 1.1rem;
+}
+
+#deletebutton {
+    width: 20px;
+    height: 20px;
+}
+
+#viewbutton {
+    width: 20px;
+    height: 20px;
+}
+
+#editbutton {
+    width: 26px;
+    height: 26px;
+}
+
+.action-buttons button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+
+    border: none;
+    background: none;
+}
+
+.img-fluid {
+    width: 50px;
+    height: 50px;
+}
+
+.conteudo {
+    margin-top: 50px;
+    margin-left: 600px;
+    width: 100%;
+
+}
+
+form {
+    width: 100%;
+    max-width: 900px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#permissao {
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.borda {
+    border: 1px solid #dcdcdc;
+    border-radius: 15px;
+
+    padding: 20px;
+
+    width: 220px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.borda i {
+    font-size: 50px;
+    color: #0d6efd;
+    margin-bottom: 10px;
+}
+
+.borda .form-check-input {
+    align-self: flex-end;
 }
