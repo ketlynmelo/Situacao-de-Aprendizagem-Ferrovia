@@ -1,11 +1,13 @@
 const dados = [];
 
-const toggle = document.getElementById("toggle");
-if (toggle) {
-  toggle.addEventListener("click", function () {
-    alert("Pedido enviado ao Administrador");
-  });
-}
+let toggle = document.getElementById("toggle");
+
+toggle.addEventListener("click", function () {
+
+    alert("Pedido enviado ao Administrador 🚂");
+
+});
+form.addEventListener('submit', function (e) {
 
 const formLogin = document.getElementById("formulario");
 if (formLogin) {
@@ -232,49 +234,22 @@ if (tabelaUsuarios) {
       valido = false;
     }
 
-    if (!valido) return;
+    if (valido) {
 
-    const idx = document.getElementById("editIndex").value;
+        let usuarioObj = {
+            usuario: usuario,
+            senha: senha
+        };
 
-    if (idx === "") {
-      usuarios.push({
-        id: proximoId++,
-        nome: nome.value.trim(),
-        email: email.value.trim(),
-        tipo: tipo.value,
-        status: status.value,
-      });
-    } else {
-      usuarios[parseInt(idx, 10)] = {
-        ...usuarios[parseInt(idx, 10)],
-        nome: nome.value.trim(),
-        email: email.value.trim(),
-        tipo: tipo.value,
-        status: status.value,
-      };
+        dados.push(usuarioObj);
+
+        console.table(dados);
+
+        alert('Login realizado! 🚂');
+
+        window.location.href = "home.html";
+
+        form.reset();
     }
 
-    fecharModal("modalForm");
-    atualizarCards();
-    aplicarFiltros();
-  });
-
-  document.getElementById("btnConfirmarDelete").addEventListener("click", function () {
-    if (idxParaExcluir === null) return;
-
-    usuarios.splice(idxParaExcluir, 1);
-    idxParaExcluir = null;
-    fecharModal("modalDelete");
-    atualizarCards();
-    aplicarFiltros();
-  });
-
-  window.abrirModalAdicionar = abrirModalAdicionar;
-  window.editarUsuario = editarUsuario;
-  window.verUsuario = verUsuario;
-  window.confirmarDelete = confirmarDelete;
-  window.fecharModal = fecharModal;
-
-  atualizarCards();
-  aplicarFiltros();
-}
+});
