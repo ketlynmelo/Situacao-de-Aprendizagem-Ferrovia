@@ -2,13 +2,12 @@ let form = document.getElementById('formulario');
 
 let dados = [];
 
-let toggle = document.getElementById("toggle");
+if(toggle){
+    toggle.addEventListener("click", function () {
+        alert("Pedido enviado ao Administrador!");
+    });
+}
 
-toggle.addEventListener("click", function () {
-
-    alert("Pedido enviado ao Administrador 🚂");
-
-});
 form.addEventListener('submit', function (e) {
 
     e.preventDefault();
@@ -81,7 +80,7 @@ form.addEventListener('submit', function (e) {
 
         console.table(dados);
 
-        alert('Login realizado! 🚂');
+        alert('Login realizado!');
 
         window.location.href = "home.html";
 
