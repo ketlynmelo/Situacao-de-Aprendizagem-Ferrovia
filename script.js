@@ -1,13 +1,11 @@
 const dados = [];
 
-let toggle = document.getElementById("toggle");
-
-toggle.addEventListener("click", function () {
-
-    alert("Pedido enviado ao Administrador 🚂");
-
-});
-form.addEventListener('submit', function (e) {
+const toggle = document.getElementById("toggle");
+if (toggle) {
+  toggle.addEventListener("click", function () {
+    alert("Pedido enviado ao Administrador");
+  });
+}
 
 const formLogin = document.getElementById("formulario");
 if (formLogin) {
@@ -15,12 +13,10 @@ if (formLogin) {
     e.preventDefault();
 
     let valido = true;
-
     const usuarioInput = document.getElementById("usuario");
     const senhaInput = document.getElementById("senha");
     const usuario = usuarioInput.value;
     const senha = senhaInput.value;
-
     const erroUsuario = document.getElementById("erro-usuario");
     const erroSenha = document.getElementById("erro-senha");
 
@@ -54,12 +50,11 @@ if (formLogin) {
 
     dados.push({ usuario, senha });
     console.table(dados);
-
     alert("Login realizado!");
     window.location.href = "home.html";
     formLogin.reset();
   });
-} 
+}
 
 const tabelaUsuarios = document.getElementById("corpoTabela");
 if (tabelaUsuarios) {
@@ -234,24 +229,50 @@ if (tabelaUsuarios) {
       valido = false;
     }
 
-    if (valido) {
+    if (!valido) return;
 
-        let usuarioObj = {
-            usuario: usuario,
-            senha: senha
-        };
+    const idx = document.getElementById("editIndex").value;
 
-        dados.push(usuarioObj);
-
-        console.table(dados);
-
-        alert('Login realizado! 🚂');
-
-        window.location.href = "home.html";
-
-        form.reset();
+    if (idx === "") {
+      usuarios.push({
+        id: proximoId++,
+        nome: nome.value.trim(),
+        email: email.value.trim(),
+        tipo: tipo.value,
+        status: status.value,
+      });
+    } else {
+      const indice = parseInt(idx, 10);
+      usuarios[indice] = {
+        ...usuarios[indice],
+        nome: nome.value.trim(),
+        email: email.value.trim(),
+        tipo: tipo.value,
+        status: status.value,
+      };
     }
 
-    
+    fecharModal("modalForm");
+    atualizarCards();
+    aplicarFiltros();
+  });
 
-});
+  document.getElementById("btnConfirmarDelete").addEventListener("click", function () {
+    if (idxParaExcluir === null) return;
+
+    usuarios.splice(idxParaExcluir, 1);
+    idxParaExcluir = null;
+    fecharModal("modalDelete");
+    atualizarCards();
+    aplicarFiltros();
+  });
+
+  window.abrirModalAdicionar = abrirModalAdicionar;
+  window.editarUsuario = editarUsuario;
+  window.verUsuario = verUsuario;
+  window.confirmarDelete = confirmarDelete;
+  window.fecharModal = fecharModal;
+
+  atualizarCards();
+  aplicarFiltros();
+}
