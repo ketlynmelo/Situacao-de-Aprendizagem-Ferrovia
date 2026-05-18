@@ -542,4 +542,5 @@ form {
             background: none; border: none;
             font-size: 1.4rem; cursor: pointer; color: #aaa;
         }
-        .modal-close:hover { color: #333; }
+        .modal-close:hover { color: #333; } 
+        

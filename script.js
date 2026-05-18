@@ -59,7 +59,7 @@ if (formLogin) {
     window.location.href = "home.html";
     formLogin.reset();
   });
-}
+} 
 
 const tabelaUsuarios = document.getElementById("corpoTabela");
 if (tabelaUsuarios) {
@@ -251,5 +251,7 @@ if (tabelaUsuarios) {
 
         form.reset();
     }
+
+    
 
 });
