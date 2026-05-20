@@ -705,3 +705,19 @@ form {
 .btn-salvar:hover {
     background-color: #1e2b6e;
 }
+
+.yo{
+padding: 100px;
+background-color: #770000;
+border: solid black 5px;
+align-items: center;
+margin: 10px;
+
+
+}
+
+.container-yo{
+border-radius: 10px;
+border-color: #000000 !important;
+
+}
