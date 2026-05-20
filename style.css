@@ -312,7 +312,7 @@
 form {
     width: 100%;
     max-width: 900px;
-    background: white;
+    background: rgb(0, 0, 0) !important;
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -704,4 +704,24 @@ form {
 
 .btn-salvar:hover {
     background-color: #1e2b6e;
+}
+
+.yo{
+padding: 70px;
+background-color: #ffffff;
+border: solid rgb(216, 209, 209) 5px;
+align-items: center;
+margin-left: 300px;
+width: 300px;
+
+
+}
+
+.container-yo{
+border-radius: 10px;
+border-color: #000000 !important;
+display: flex;
+
+
+
 }
