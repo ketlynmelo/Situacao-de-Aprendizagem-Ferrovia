@@ -707,21 +707,25 @@ form {
 }
 
 .yo{
-padding: 70px;
+padding: 30px;
 background-color: #ffffff;
-border: solid rgb(216, 209, 209) 5px;
+border: solid rgb(238, 238, 238) 5px;
 align-items: center;
-margin-left: 300px;
-width: 300px;
+border-radius: 10px;
+margin-left: 100px;
+width: 400px;
 
 
 }
+.espaco{
+    margin-left: 280px;
+}
 
 .container-yo{
-border-radius: 10px;
-border-color: #000000 !important;
 display: flex;
 
 
-
+}
+#letra{
+    font-size: 30px;
 }
