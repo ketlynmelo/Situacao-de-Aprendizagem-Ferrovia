@@ -707,11 +707,12 @@ form {
 }
 
 .yo{
-padding: 100px;
-background-color: #770000;
-border: solid black 5px;
+padding: 70px;
+background-color: #ffffff;
+border: solid rgb(216, 209, 209) 5px;
 align-items: center;
-margin: 10px;
+margin-left: 300px;
+width: 300px;
 
 
 }
@@ -719,5 +720,8 @@ margin: 10px;
 .container-yo{
 border-radius: 10px;
 border-color: #000000 !important;
+display: flex;
+
+
 
 }
