@@ -66,8 +66,51 @@
 
         <div class="container-fluid">
 
+            <div class="tab-pane fade" id="cadastrarTrem">
+                <div class="form-card">
+                    <div class="page-title">Cadastrar Trens</div>
+
+                    <form class="row g-3 needs-validation" novalidate>
+
+                        <div class="col-12">
+                            <label for="ct_nome" class="form-label">Nome do Trem</label>
+                            <input type="text" class="form-control" id="ct_nome" placeholder="ex: Stiles" />
+                        </div>
+
+                        <div class="col-12">
+                            <label for="ct_linha" class="form-label">Linha</label>
+                            <input type="text" class="form-control" id="ct_linha" placeholder="ex: 0500" />
+                        </div>
+
+                        <div class="col-12">
+                            <label for="ct_carga" class="form-label">Carga</label>
+                            <select class="form-select" id="ct_carga">
+                                <option value="" selected disabled>Selecione o tipo de carga</option>
+                                <option>Passageiros</option>
+                                <option>Carga Geral</option>
+                                <option>Minério</option>
+                                <option>Combustível</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="ct_sensor" class="form-label">Sensor</label>
+                            <select class="form-select" id="ct_sensor">
+                            </select>
+                        </div>
+
+                        <div class="col-12 d-flex gap-2 mt-3">
+                            <button type="button" class="btn btn-cancelar">Cancelar</button>
+                            <button type="submit" class="btn btn-salvar">Salvar</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
         </div>
-        
+
     </main>
 
 </body>
