@@ -12,7 +12,6 @@
 
 <body>
 
-
     <aside class="sidebar">
 
         <div class="text-center mb-5">
@@ -66,10 +65,68 @@
 
         <div class="container-fluid">
 
-            <div class></div>
+            <div class="container" style="max-width: 820px; margin-top: 50px; padding-bottom: 60px;">
+
+                <div class="tab-content">
+
+                    <div class="tab-pane fade show active" id="cadastrarSensor">
+                        <div class="form-card">
+                            <div class="page-title">Cadastrar Sensor</div>
+
+                            <form class="row g-3 needs-validation" novalidate>
+
+                                <div class="col-12">
+                                    <label for="cs_nome" class="form-label">Nome do sensor</label>
+                                    <input type="text" class="form-control" id="cs_nome"
+                                        placeholder="ex: sensor velocidade 03" />
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="cs_tipo" class="form-label">Tipos de Dados Monitorado</label>
+                                    <select class="form-select" id="cs_tipo">
+                                        <option value="" selected disabled>Selecione o tipo de dado</option>
+                                        <option>Velocidade</option>
+                                        <option>Temperatura</option>
+                                        <option>Pressão</option>
+                                        <option>Vibração</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input" type="text" name="es_assoc" id="es_loc_radio"
+                                            value="localizacao" />
+                                        <label class="form-check-label" for="es_loc_radio">Localização</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input" type="radio" name="cs_assoc" id="cs_trem_radio"
+                                            value="trem" />
+                                        <label class="form-check-label" for="cs_trem_radio">Trem vinculado</label>
+                                    </div>
+                                    <select class="form-select" id="cs_trem" disabled>
+                                    </select>
+                                </div>
+
+                                <div class="col-12 d-flex gap-2 mt-3">
+                                    <button type="button" class="btn btn-cancelar">Cancelar</button>
+                                    <button type="submit" class="btn btn-salvar">Salvar</button>
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
-        
+
     </main>
 
 </body>
