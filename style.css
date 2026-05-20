@@ -312,7 +312,7 @@
 form {
     width: 100%;
     max-width: 900px;
-    background: white;
+    background: rgb(0, 0, 0) !important;
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
