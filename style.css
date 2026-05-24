@@ -708,7 +708,6 @@ form {
 
 .yo{
 padding: 15px;
-background-color: #ffffff;
 border: solid rgb(238, 238, 238) 5px;
 align-items: center;
 border-radius: 10px;
@@ -728,4 +727,15 @@ display: flex;
 }
 #letra{
     font-size: 30px;
+}
+
+.yo2{
+
+padding: 15px;
+border: solid rgb(238, 238, 238) 5px;
+align-items: center;
+border-radius: 10px;
+margin-left: 260px;
+width: 600px;
+position: absolute;
 }
