@@ -738,4 +738,17 @@ border-radius: 10px;
 margin-left: 260px;
 width: 600px;
 position: absolute;
+top: 300px;
+}
+
+.yo3{
+
+padding: 5px;
+border: solid rgb(238, 238, 238) 5px;
+align-items: center;
+border-radius: 10px;
+margin-left: 560px;
+width: 600px;
+position: absolute;
+top: 300px;
 }
