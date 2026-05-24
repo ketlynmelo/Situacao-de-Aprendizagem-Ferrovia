@@ -707,7 +707,7 @@ form {
 }
 
 .yo{
-padding: 15px;
+padding: 5px;
 border: solid rgb(238, 238, 238) 5px;
 align-items: center;
 border-radius: 10px;
@@ -736,9 +736,9 @@ border: solid rgb(238, 238, 238) 5px;
 align-items: center;
 border-radius: 10px;
 margin-left: 260px;
-width: 600px;
+width: 620px;
 position: absolute;
-top: 300px;
+top: 250px;
 }
 
 .yo3{
@@ -747,8 +747,8 @@ padding: 5px;
 border: solid rgb(238, 238, 238) 5px;
 align-items: center;
 border-radius: 10px;
-margin-left: 560px;
-width: 600px;
+margin-left: 900px;
+width: 620px;
 position: absolute;
-top: 300px;
+top: 250px;
 }
