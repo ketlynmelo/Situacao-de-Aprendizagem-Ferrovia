@@ -8,13 +8,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-#preto {
-    background-color: rgb(0, 0, 0);
-    padding: 57% 45% 0 0;
-    position: relative;
-}
-
 #branco{
     color: white;
 }
@@ -32,12 +25,11 @@
 }
 
 #logo {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 600px;
-    height: 700px;
+    position: relative !important;
+    width: 700px;
+    height: 950px;
 }
+
 
 .toggle {
     text-align: end;
