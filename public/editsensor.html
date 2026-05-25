@@ -14,7 +14,6 @@
 
 <body>
 
-
     <aside class="sidebar">
 
         <div class="text-center mb-5">
@@ -25,35 +24,35 @@
 
         <nav class="d-flex flex-column">
 
-            <a href="home.html" class="menu-link active">
+            <a href="public/home.html" class="menu-link active">
 
                 <i class="bi bi-house-fill"></i>
                 <span>Início</span>
 
             </a>
 
-            <a href="monitoramento.html" class="menu-link">
+            <a href="public/monitoramento.html" class="menu-link">
 
                 <i class="bi bi-graph-up"></i>
                 <span>Monitoramento</span>
 
             </a>
 
-            <a href="relatorios.html" class="menu-link">
+            <a href="public/relatorios.html" class="menu-link">
 
                 <i class="bi bi-file-earmark-text"></i>
                 <span>Relatórios</span>
 
             </a>
 
-            <a href="usuario.html" class="menu-link">
+            <a href="public/usuario.html" class="menu-link">
 
                 <i class="bi bi-people"></i>
                 <span>Usuários</span>
 
             </a>
 
-            <a href="login.html" class="menu-link">
+            <a href="public/login.html" class="menu-link">
 
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sair</span>
@@ -68,36 +67,42 @@
 
         <div class="container-fluid">
 
-            <div class="tab-pane fade" id="cadastrarTrem">
+            <div class="tab-pane fade" id="editarSensor">
                 <div class="form-card">
-                    <div class="page-title">Cadastrar Trens</div>
+                    <div class="page-title">Editar Sensor</div>
 
                     <form class="row g-3 needs-validation" novalidate>
 
                         <div class="col-12">
-                            <label for="ct_nome" class="form-label">Nome do Trem</label>
-                            <input type="text" class="form-control" id="ct_nome" placeholder="ex: Stiles" />
+                            <label for="es_nome" class="form-label">Nome do sensor</label>
+                            <input type="text" class="form-control" id="es_nome" value="Lazum" />
                         </div>
 
                         <div class="col-12">
-                            <label for="ct_linha" class="form-label">Linha</label>
-                            <input type="text" class="form-control" id="ct_linha" placeholder="ex: 0500" />
+                            <label for="es_tipo" class="form-label">Tipos de Dados Monitorado</label>
+                            <input type="text" class="form-control" id="es_tipo" value="Velocidade" readonly />
                         </div>
 
                         <div class="col-12">
-                            <label for="ct_carga" class="form-label">Carga</label>
-                            <select class="form-select" id="ct_carga">
-                                <option value="" selected disabled>Selecione o tipo de carga</option>
-                                <option>Passageiros</option>
-                                <option>Carga Geral</option>
-                                <option>Minério</option>
-                                <option>Combustível</option>
-                            </select>
+                            <label for="es_id" class="form-label">ID</label>
+                            <input type="text" class="form-control" id="es_id" value="150" readonly />
                         </div>
 
                         <div class="col-12">
-                            <label for="ct_sensor" class="form-label">Sensor</label>
-                            <select class="form-select" id="ct_sensor">
+                            <div class="form-check mb-1">
+                                <input class="form-check-input" type="text" name="es_assoc" id="es_loc_radio"
+                                    value="localizacao" />
+                                <label class="form-check-label" for="es_loc_radio">Localização</label>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-check mb-1">
+                                <input class="form-check-input" type="radio" name="es_assoc" id="es_trem_radio"
+                                    value="trem" checked />
+                                <label class="form-check-label" for="es_trem_radio">Trem vinculado</label>
+                            </div>
+                            <select class="form-select" id="es_trem">
                             </select>
                         </div>
 
@@ -110,6 +115,7 @@
 
                 </div>
             </div>
+
 
         </div>
 
