@@ -1,4 +1,4 @@
-# Situa-o-de-Aprendizagem---Ferrovia
+# Situacao-de-Aprendizagem-Ferrovia
 Atividade projetada para a construção de um site para uma empresa de trem.
 
   O sistema proposto é uma plataforma de monitoramento ferroviário que tem como objetivo acompanhar o funcionamento dos trens e dos sensores instalados ao longo da ferrovia. O objetivo principal do projeto é permitir que os usuários visualizem informações importantes em tempo real, como velocidade, localização, temperatura e possíveis falhas, ajudando a melhorar a segurança e a eficiência das operações com o uso de um sistema simples e funcional que permita o controle e o monitoramento desses dados.
